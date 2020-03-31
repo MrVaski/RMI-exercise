@@ -22,7 +22,7 @@ public class NotificationClient {
                 client.submit(event);
             } else {
                 List<Event> list = client.get();
-                System.out.println("size " + list.size());
+                System.out.println("Size: " + list.size());
 
                 for (Event event : list) {
                     System.out.println("Event: " + event);

@@ -12,7 +12,7 @@ public class NotificationServer implements Notification {
 
     @Override
     public void submit(Event e) throws RemoteException {
-        System.out.println("Dodaje zdarzenie: " + e);
+        System.out.println("Adding event: " + e);
 
         container.add(e);
     }
@@ -30,7 +30,7 @@ public class NotificationServer implements Notification {
             UnicastRemoteObject.exportObject(server, 0);
             Registry registry = LocateRegistry.getRegistry();
             registry.rebind(args[0], server);
-            System.out.println("Zarejestrowalem sie");
+            System.out.println("Registered");
         } catch (RemoteException e) {
             e.printStackTrace();
         }

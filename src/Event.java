@@ -10,7 +10,7 @@ import java.io.Serializable;
         }
 
         public String toString() {
-            return "Event [timestamp=" + timestamp + ", description=" + description
+            return "Event [timestamp= " + timestamp + ", description= " + description
                     + "]";
         }
     }
